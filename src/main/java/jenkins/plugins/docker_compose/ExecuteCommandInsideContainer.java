@@ -115,7 +115,7 @@ public class ExecuteCommandInsideContainer extends DockerComposeCommandOption {
             }
             
             // Set service and command
-            cmd.append(" " + service + " /bin/bash -c \"" + command + "\"");
+            cmd.append(" " + service + " /bin/sh -c \"" + command + "\"");
 
             // Launch command
             LOGGER.info("Executing command '{}' (service: {}, index: {}, workDir: {})", command, service, index, workDir);
